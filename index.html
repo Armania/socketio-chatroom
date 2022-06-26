@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Socket IO, Message Board</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<script src="jquery.js"></script>
+	<script src="popper.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+
+	<style>
+		ul {
+			list-style: none;
+			margin-left: 0;
+		}
+		ul li {
+			border-bottom: 1px solid;
+		}
+		.posted {
+			margin:0;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="container">
+			<div class="page-header ">
+				<h1>Message Board</h1>
+			</div>
+		<div class="row">
+			<div class="messages-container span8" >
+				<ul id="messages">
+				</ul>
+			</div>
+			<div class="jumbotron span4">
+				<h1 class="display-4">Message Form</h1>
+				<br>
+				<input id="name" class="form-control" placeholder="Username">
+				<br>
+				<textarea id="message" class="form-control well" placeholder="Instant Post..."></textarea>
+				<br>
+				<button id="send" class="btn btn-success">post</button>
+			</div>
+		</div>
+	</div>
+	<script src="index.js"></script>
+</body>
+</html>
