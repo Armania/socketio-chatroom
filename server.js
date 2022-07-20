@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended:false}))
 
 mongoose.Promise = Promise;
 
-var dbUrl = "mongodb+srv://db-admin:admin@cluster0-d4klr.mongodb.net/test?retryWrites=true&w=majority";
+var dbUrl = process.env.DBURL;
 
 Message = mongoose.model('Message', {
 	"name": String,
